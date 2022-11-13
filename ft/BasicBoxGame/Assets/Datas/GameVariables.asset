@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d12e9d41dc129643a4a750994ebd047, type: 3}
   m_Name: GameVariables
   m_EditorClassIdentifier: 
-  BasePlayerHealth: 80
-  BasePlayerDamage: 4
-  BaseEnemyHealth: 50
+  BasePlayerHealth: 90
+  BasePlayerDamage: 6
+  BaseEnemyHealth: 40
   BaseEnemyDamage: 2
-  EnemyIncreasementWithStage: 4
-  BaseEnemyQuantity: 5
+  EnemyIncreasementWithStage: 2
+  BaseEnemyQuantity: 3
