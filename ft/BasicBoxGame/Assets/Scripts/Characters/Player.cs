@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Player : Human
 {
-    public Player(GameObject self, LayerMask targetLayer)
+    float speed;
+    public Player(GameObject self, LayerMask targetLayer, float _speed)
     :base(self, targetLayer)
     {
         IsPlayer = true;
+        speed = _speed;
+
     }
 
     protected override void DefineMovement()
@@ -79,7 +82,7 @@ public class Player : Human
 
         Animate(run);
 
-        Vector3 moveVec = -SceneManager.Instance.joistick.ResultDirection / 150f;
+        Vector3 moveVec = -SceneManager.Instance.joistick.ResultDirection;
 
         moveVec.z = moveVec.y;
 
@@ -87,7 +90,7 @@ public class Player : Human
 
         
         
-        Self.transform.position += moveVec;
+        Self.transform.position += moveVec * Time.deltaTime * speed;
         
         ChangeSituation(Situation.Running);
     }

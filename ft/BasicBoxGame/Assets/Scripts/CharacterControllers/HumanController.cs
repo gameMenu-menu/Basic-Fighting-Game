@@ -12,6 +12,8 @@ public class HumanController : MonoBehaviour
 
     public bool isPlayer;
 
+    public float speed;
+
 
     void Update()
     {
@@ -30,7 +32,7 @@ public class HumanController : MonoBehaviour
 
     public void Reset(int health, int damage)
     {
-        if(isPlayer) character = new Player(gameObject, layerEnemy);
+        if(isPlayer) character = new Player(gameObject, layerEnemy, speed);
         else
         {
             character = new Enemy(gameObject, layerPlayer);
